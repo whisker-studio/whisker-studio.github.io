@@ -96,8 +96,9 @@ nav {
 		width: 3.125rem;
 		height: 3.125rem;
 		margin-left: 0.7rem;
-		background-image: url(../images/logo.png);
-		background-size: 50px;
+		background-image: url(../images/list.svg);
+		background-size: 2rem;
+		background-position: center;
 		background-repeat: no-repeat;
 		transition: all .3s;
 		flex-direction: column;
@@ -119,7 +120,7 @@ nav {
 		background-position: center top;
 		background-size: 0;
 		height: 10rem;
-		background-color: #bca;
+		background-color: #c8d6e5;
 	}
 }
 

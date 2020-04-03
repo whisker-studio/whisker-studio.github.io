@@ -3,13 +3,50 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Whisker Music</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="shortcut icon" type="image/png" href="./images/logo.png" />
+		<link rel="stylesheet" type="text/css" href="./css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="./css/music.css" />
+		<script src="./js/nav.js"></script>
+		<script src="./js/motto.js"></script>
 	</head>
 	<body>
-		<h1>
-			We are building it...
-		</h1>
-		<h2>In fact,we also made some awesome songs.So ... maybe we will show them after we finish the comic.</h2>
-		<b>You know that,Whisker Studio only has 6 members,one to draw,one to program,one to write,one to do art,one to give good color,and the last one is a baby.<br>So... we are working,yean ,working hard.But it takes us a long time.<big>Thank for your support!</big></b>
-		<h3><a href="./">BACK</a></h3>
+		<nav>
+			<div class="center">
+				<div id="logo">
+					<a href="./">
+						<img src="./images/logo.png" width="50">
+					</a>
+					<a href="./">
+						<span>Whisker Studio</span>
+					</a>
+				</div>
+				<div id="option">
+					<a href="./comic.html" id="comic">comic</a>
+					<a href="./music.html" id="music">music</a>
+				</div>
+				<div id="motto"></div>
+			</div>
+		</nav>
+		<main>
+			<div id="cover">
+
+			</div>
+			<div id="info">Song's Name</div>
+			<div id="control">
+				<div id="progress-bar">
+					<div id="current-point"></div>
+				</div>
+				<div id="control-bar">
+					<div id="pre"></div>
+					<div id="pause"></div>
+					<div id="next"></div>
+				</div>
+			</div>
+		</main>
+		<audio src="https://whisker_studio.gitee.io/music/summertime.flac">
+			当前浏览器不支持audio
+		</audio>
+		<script src="./js/music_control.js"></script>
 	</body>
 </html>

@@ -5,7 +5,7 @@ body {
 
 main {
 	width: 60%;
-	min-height: calc(100vh - 3.125rem - 20px - 6em);
+	min-height: calc(100vh - 3.125rem - 7.25em);
 	margin: 0 auto;
 	border-width: 0 10px;
 	border-color: #000;
@@ -19,15 +19,15 @@ main {
 	margin-bottom: .5em;
 }
 #h1-logo{
-	width: 5rem;
-	height: 5rem;
+	width: 4rem;
+	height: 4rem;
 	background-image: url(../images/logo.png);
 	background-size: cover;
 }
 h1 {
 	margin: 0px;
-	line-height: 5rem;
-	font-size: 2.5em;
+	line-height: 4rem;
+	font-size: 2.2em;
 	color: #e03;
 }
 

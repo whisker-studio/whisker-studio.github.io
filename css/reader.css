@@ -53,8 +53,7 @@ body>div {
 	.img-container {
 		background-color: transparent;
 		width: 3.125rem;
-		/* top: 50px; */
-		/* left: -.5rem; */
+		transform:translate(0.8em)
 	}
 
 	.setting-content {
@@ -67,6 +66,6 @@ body>div {
 	}
 
 	.img-container:hover .setting-content {
-		transform: translateX(12.2em);
+		transform: translateX(12.3em);
 	}
 }

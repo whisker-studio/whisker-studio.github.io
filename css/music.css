@@ -1,0 +1,96 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	display: flex;
+	width: calc(100vh - 3.125rem);
+	height: calc(100vh - 3.125rem);
+	background-color: #10AC84;
+	margin: 0 auto;
+	padding: 2rem;
+	padding-bottom: 1.375rem;
+	flex-direction: column;
+	align-items: center;
+	box-sizing: border-box;
+	justify-content: space-between;
+}
+
+main div {
+	box-sizing: border-box;
+}
+
+#cover {
+	width: 60%;
+	height: calc(60% - 0.625rem);
+	background-color: #34495E;
+	margin-bottom: 1.25rem;
+}
+
+#info {
+	width: 63%;
+	height: 2.75rem;
+	padding: .5rem 1.5rem;
+	font-size: 1.3rem;
+	line-height: 1.75rem;
+	border-radius: 2.75rem;
+	background-color: #596275;
+	text-align: center;
+	margin-bottom: 3.2rem;
+}
+
+#control {
+	width: 100%;
+}
+
+#progress-bar {
+	position: relative;
+	width: 100%;
+	height: 6px;
+	background-color: #37f;
+}
+
+#current-point {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background-color: #fff;
+	top: -5px;
+	transform:translate(-8px,0);
+}
+
+#control-bar {
+	display: flex;
+	width: 100%;
+	height: 103px;
+	padding: 6px;
+	background-color: #786FA6;
+	justify-content: space-around;
+	align-items: flex-end;
+}
+
+#control-bar div {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 40px;
+	border:4px solid #fff;
+}
+
+div#pause {
+	width: 90px;
+	height: 90px;
+	background-image: url(../images/play.svg);
+}
+
+div#next {
+	background-image: url(../images/forward.svg);
+}
+
+div#pre {
+	background-image: url(../images/backward.svg);
+}
