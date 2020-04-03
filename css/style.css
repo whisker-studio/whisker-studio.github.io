@@ -28,7 +28,7 @@ h1 {
 	margin: 0px;
 	line-height: 5rem;
 	font-size: 2.5em;
-	color: #d03;
+	color: #e03;
 }
 
 p::first-letter {
@@ -42,7 +42,8 @@ footer {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: #37f;
+	/* background-color: #37f; */
+	background-color: #596275;
 	color: #fff;
 	font-size: 1.2em;
 	animation: up 1s 1;

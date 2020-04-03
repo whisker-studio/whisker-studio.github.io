@@ -59,8 +59,11 @@ main>div {
 .linkField a {
 	color: #000;
 	text-decoration: none;
+	transition: font-size .1s;
 }
-
+.linkField a:hover{
+	font-size: 1.3em;
+}
 @media all and (max-width:800px) {
 	body{
 		font-size:10px;

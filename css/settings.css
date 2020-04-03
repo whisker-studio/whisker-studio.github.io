@@ -3,8 +3,7 @@
     min-height: 50px;
     position: absolute;
     right: 70px;
-    /* background-color: #b2bec3; */
-	background-color: #bca;
+    background-color: #c8d6e5;
 }
 
 .setting {
@@ -61,11 +60,11 @@
 }
 
 .theme:nth-child(3) {
-    background-color: #2980b9;
+    background-color: #786fa6;
 }
 
 .theme:nth-child(4) {
-    background-color: #cf6a87;
+    background-color: #10ac84;
 }
 
 .theme:nth-child(5) {
