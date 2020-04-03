@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Comic Reader</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="./css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="./css/settings.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/reader.css" />
+		<script src="./js/nav.js"></script>
+	</head>
+	<body>
+		<nav>
+			<div class="center">
+				<div id="logo">
+					<a href="./">
+						<img src="./images/logo.png" width="50">
+					</a>
+					<a href="./">
+						<span>Whisker Studio</span>
+					</a>
+				</div>
+				<div id="option">
+					<a href="./comic.html" id="comic">comic</a>
+					<a href="./music.html" id="music">music</a>
+				</div>
+				<div class="img-container">
+					<img src="./images/settings.svg" class="setting">
+					<div class="setting-content">
+						<div id="themes">
+							<div class="theme" data-theme="#fff"></div>
+							<div class="theme" data-theme="#74b9ff"></div>
+							<div class="theme" data-theme="#2980b9"></div>
+							<div class="theme" data-theme="#cf6a87"></div>
+							<div class="theme" data-theme="#34495e"></div>
+						</div>
+						<div id="font">
+							<div class="size" data-size=".3">smaller</div>
+							<div class="size" data-size=".5">normal</div>
+							<div class="size" data-size=".7">larger</div>
+							<div class="size" data-size=".9">largest</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div id="leftArr"></div>
+		<div id="rightArr"></div>
+		<main></main>
+		<a href="#" id="backToTop"></a>
+		<script src="./js/reader.js"></script>
+		<script src="./js/theme.js"></script>
+		<script src="./js/loadTheme.js"></script>
+	</body>
+</html>

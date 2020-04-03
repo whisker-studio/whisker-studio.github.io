@@ -1,0 +1,71 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	width: 60%;
+	margin: 0 auto;
+	padding: 0.625em 1.875em;
+	/* background-color: indianred; */
+}
+
+main>div {
+	border: 2px solid #000;
+	margin-bottom: 1.25em;
+	border-radius: 1.25em;
+}
+
+.infoField {
+	display: flex;
+	height: 15.625em;
+	/* background-color: #BBCCAA; */
+	border-radius: inherit;
+}
+
+.infoField img {
+	height: 100%;
+	border-radius: inherit;
+}
+.infoField h2{
+	margin: 0.625em 0;
+}
+.infoField p{
+	margin: 0.5em 0;
+}
+
+.content {
+	margin-left: 0.625em;
+}
+
+.linkField {
+	display: flex;
+	flex-direction: column;
+	margin-top: 0.625em;
+	margin-left: 3em;
+	font-size: 1.25em;
+	line-height: 2em;
+}
+
+.linkField span {
+	font-weight: bold;
+}
+
+.linkField ul {
+	margin: 0.375em 0 1.25em;
+	list-style-type: circle;
+}
+
+.linkField a {
+	color: #000;
+	text-decoration: none;
+}
+
+@media all and (max-width:800px) {
+	body{
+		font-size:10px;
+	}
+	main{
+		width:80%;
+	}
+}
