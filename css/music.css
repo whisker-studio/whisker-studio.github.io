@@ -7,9 +7,7 @@ main {
 	display: flex;
 	width: calc(100vh - 3.125rem);
 	height: calc(100vh - 3.125rem);
-	/* background-color: #786FA6; */
 	background-color: #10AC84;
-	/* background-color: rgb(34,177,76); */
 	margin: 0 auto;
 	/* padding: 1.375rem; */
 	flex-direction: column;
@@ -25,7 +23,6 @@ main div {
 #cover {
 	width: 55%;
 	height: 55%;
-	/* background-color: #34495E; */
 	background-color: #fff;
 	margin-top: 2.2rem;
 }
@@ -37,7 +34,6 @@ main div {
 	font-size: 1.3rem;
 	line-height: 1.75rem;
 	border-radius: 2.75rem;
-	/* background-color: #596275; */
 	background-color: #fff;
 	text-align: center;
 	margin-bottom: 5rem;
@@ -56,7 +52,6 @@ main div {
 	border-style: solid;
 	border-color: #10AC84;
 	background-origin: content-box;
-	/* background-color: #EE0033; */
 	background-color: #fff;
 }
 
@@ -89,7 +84,6 @@ main div {
 	width: 100%;
 	height: 106px;
 	padding: 6px;
-	/* background-color: #10AC84; */
 	justify-content: space-around;
 	align-items: flex-end;
 }
@@ -140,8 +134,9 @@ div#volume {
 	background-image: url(../images/vol_3.svg);
 	background-color: #37f;
 }
-#volumn-control-bar{
-    -webkit-appearance: none;
+
+#volumn-control-bar {
+	-webkit-appearance: none;
 	display: none;
 	position: absolute;
 	bottom: 20px;
@@ -153,12 +148,15 @@ div#volume {
 	margin: 0;
 	outline: none;
 }
-#volume:hover{
+
+#volume:hover {
 	height: 220px;
 }
-#volume:hover #volumn-control-bar{
+
+#volume:hover #volumn-control-bar {
 	display: block;
 }
+
 .onloop {
 	box-shadow: #fff 0 0 20px 10px;
 }
@@ -166,53 +164,50 @@ div#volume {
 #volumn-control-bar::-webkit-slider-runnable-track {
 	width: 100%;
 	height: 4px;
-	/* background-image: linear-gradient(#66c,#66c); */
 	background-color: #fff;
-    border-radius: 2px; /*将轨道设为圆角的*/
+	border-radius: 2px;
 }
 
 #volumn-control-bar::-moz-range-track {
 	width: 100%;
 	height: 4px;
-	/* background-image: linear-gradient(#66c,#66c); */
 	background-color: #fff;
-    border-radius: 2px; /*将轨道设为圆角的*/
+	border-radius: 2px;
 }
 
 #volumn-control-bar::-ms-track {
 	width: 100%;
 	height: 4px;
-	/* background-image: linear-gradient(#66c,#66c); */
 	background-color: #fff;
-    border-radius: 2px; /*将轨道设为圆角的*/
+	border-radius: 2px;
 }
 
 #volumn-control-bar::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    height: 15px;
+	-webkit-appearance: none;
+	height: 15px;
 	width: 15px;
 	margin-top: -5.5px;
-    background: #e03;
-    border-radius: 50%;
-    border: none;
+	background: #e03;
+	border-radius: 50%;
+	border: none;
 }
 
 #volumn-control-bar::-moz-range-thumb {
-    -webkit-appearance: none;
-    height: 15px;
+	-webkit-appearance: none;
+	height: 15px;
 	width: 15px;
 	margin-top: -5.5px;
-    background: #e03;
-    border-radius: 50%;
-    border: none;
+	background: #e03;
+	border-radius: 50%;
+	border: none;
 }
 
 #volumn-control-bar::-ms-thumb {
-    -webkit-appearance: none;
-    height: 15px;
+	-webkit-appearance: none;
+	height: 15px;
 	width: 15px;
 	margin-top: 0;
-    background: #e03;
-    border-radius: 50%;
-    border: none;
+	background: #e03;
+	border-radius: 50%;
+	border: none;
 }

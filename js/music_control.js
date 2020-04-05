@@ -37,9 +37,9 @@ audio.addEventListener("ended", () => {
 	audio.play();
 });
 
-(function () {
+(function() {
 	let volMemory = 0;
-	vol.parentElement.addEventListener("click", function (e) {
+	vol.parentElement.addEventListener("click", function(e) {
 		if (e.target !== this) return;
 		[volMemory, vol.value] = [vol.value, volMemory];
 		updateVol();
@@ -48,12 +48,13 @@ audio.addEventListener("ended", () => {
 	vol.addEventListener("mousemove", updateVol);
 
 	function updateVol() {
+		if (volMemory && !audio.volume) volMemory = 0;
 		audio.volume = vol.value / 100;
 		vol.parentElement.style.backgroundImage = `url(./images/vol_${Math.ceil(vol.value/25)}.svg)`;
 	}
 })();
 // 控制进度条的闭包
-(function () {
+(function() {
 	cp.style.left = "0px"; // 初始化对左值
 	let down = false; // 是否在小圈圈内按下鼠标
 	let lastX = cp.getBoundingClientRect().left; // 上一个小圈圈所在的x坐标
@@ -69,17 +70,18 @@ audio.addEventListener("ended", () => {
 	// 如果移动了鼠标
 	document.addEventListener("mousemove", changeProgress);
 	// 小圈圈随时间前进
-	audio.addEventListener("timeupdate", function () {
+	audio.addEventListener("timeupdate", function() {
 		cp.style.left = (this.currentTime / this.duration * 100) + "%"; // 修改样式
 		pb.style.width = (this.currentTime / this.duration * 100) + "%"; // 修改样式
 		lastX = cp.getBoundingClientRect().left; // 记录坐标
 	});
-	cp.parentElement.addEventListener("click",(e)=>{
+	cp.parentElement.addEventListener("click", (e) => {
 		down = true; // 按下鼠标记录
 		changeProgress(e);
 		down = false;
 	});
-	function changeProgress(e){
+
+	function changeProgress(e) {
 		if (!down) return; // 未按下鼠标,返回
 		let left = (parseFloat(cp.style.left) * barLength / 100 + (e.clientX - lastX - cp.clientWidth / 2)) / barLength *
 			100; // 小圈圈对左的百分比
