@@ -2,11 +2,11 @@
 	{
 		"name":"Koala",
 		"cover":"./images/logo.png",
-		"src":"./music/songs/allnight.mp3"
+		"src":"koala.mp3"
 	},
 	{
 		"name":"Push Away",
 		"cover":"./images/logo.png",
-		"src":"./music/songs/allnight.mp3"
+		"src":"push_away.mp3"
 	}
 ]
