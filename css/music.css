@@ -9,8 +9,7 @@ main {
 	height: calc(100vh - 3.125rem);
 	background-color: #786FA6;
 	margin: 0 auto;
-	padding: 2rem;
-	padding-bottom: 1.375rem;
+	padding: 1.375rem;
 	flex-direction: column;
 	align-items: center;
 	box-sizing: border-box;
@@ -23,7 +22,7 @@ main div {
 
 #cover {
 	width: 60%;
-	height: calc(60% - 0.625rem);
+	height: 60%;
 	background-color: #34495E;
 	margin-bottom: 1.25rem;
 }
@@ -50,7 +49,11 @@ main div {
 	height: 4px;
 	background-color: #37f;
 }
-
+#passed-bar{
+	height: 100%;
+	width: 0;
+	background-color: #EE0033;
+}
 #current-point {
 	position: absolute;
 	width: 10px;
