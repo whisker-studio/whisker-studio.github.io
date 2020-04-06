@@ -7,9 +7,8 @@ main {
 	display: flex;
 	width: calc(100vh - 3.125rem);
 	height: calc(100vh - 3.125rem);
-	background-color: #10AC84;
+	background-color: #10ac84;
 	margin: 0 auto;
-	/* padding: 1.375rem; */
 	flex-direction: column;
 	align-items: center;
 	box-sizing: border-box;
@@ -25,12 +24,13 @@ main div {
 	height: 55%;
 	background-color: #fff;
 	margin-top: 2.2rem;
+	border-radius: 50%;
 }
 
 #info {
 	width: 50%;
 	height: 2.75rem;
-	padding: .5rem 1.5rem;
+	padding: 0.5rem 1.5rem;
 	font-size: 1.3rem;
 	line-height: 1.75rem;
 	border-radius: 2.75rem;
@@ -50,9 +50,10 @@ main div {
 	height: 4px;
 	border-width: 10px 0;
 	border-style: solid;
-	border-color: #10AC84;
+	border-color: #10ac84;
 	background-origin: content-box;
 	background-color: #fff;
+	cursor: pointer;
 }
 
 #passed-bar {
@@ -72,11 +73,11 @@ main div {
 }
 
 #current-point:hover {
-	box-shadow: rgba(255, 255, 255, .3) 0 0 0 5px;
+	box-shadow: rgba(255, 255, 255, 0.3) 0 0 0 5px;
 }
 
 .active {
-	box-shadow: rgba(255, 255, 255, .3) 0 0 0 5px;
+	box-shadow: rgba(255, 255, 255, 0.3) 0 0 0 5px;
 }
 
 #control-bar {
@@ -92,6 +93,7 @@ main div {
 	border-radius: 50%;
 	background-repeat: no-repeat;
 	background-position: center;
+	cursor: pointer;
 }
 
 .mainControl {
@@ -114,7 +116,9 @@ main div {
 #pre {
 	background-image: url(../images/backward.svg);
 }
-
+#pause:hover,#next:hover,#pre:hover{
+	box-shadow: #fff 0 0 10px 1px;
+}
 #loop {
 	width: 50px;
 	height: 50px;
@@ -133,11 +137,13 @@ div#volume {
 	background-position: center bottom;
 	background-image: url(../images/vol_3.svg);
 	background-color: #37f;
+	overflow: hidden;
+	transition: height .3s;
 }
 
 #volumn-control-bar {
 	-webkit-appearance: none;
-	display: none;
+	display: block;
 	position: absolute;
 	bottom: 20px;
 	transform-origin: left top;
@@ -151,10 +157,6 @@ div#volume {
 
 #volume:hover {
 	height: 220px;
-}
-
-#volume:hover #volumn-control-bar {
-	display: block;
 }
 
 .onloop {

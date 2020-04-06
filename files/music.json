@@ -1,12 +1,12 @@
 [
 	{
 		"name":"Koala",
-		"cover":"./images/logo.png",
+		"cover":"rescue_koala.jpg",
 		"src":"koala.mp3"
 	},
 	{
 		"name":"Push Away",
-		"cover":"./images/logo.png",
+		"cover":"rescue_koala.jpg",
 		"src":"push_away.mp3"
 	}
 ]
