@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Surface's playground</title>
+		<script src="./lock.js"></script>
+		<style type="text/css">
+			a {
+				color: #3377FF;
+			}
+			textarea{
+				width: 400px;
+				height: 250px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2><a href="https://sj-261725.github.io">My &lt;MATH TOOL PLUS&gt; project</a></h2>
+		<h1>Simple Code and Decode</h1>
+		<label for="toCode">待加密文本:</label><br>
+		<textarea id="toCode" value="" placeholder="仅支持字母数字空格以及下划线" /></textarea>
+		<br><br>
+		<input type="button" id="btn1" value="加密!" />
+		&nbsp;&nbsp;
+		<input type="button" id="btn2" value="解密!" />
+		<br><br>
+		<label for="codeed">加密文本:</label><br>
+		<textarea id="codeed" value="" /></textarea>
+		<script type="text/javascript">
+			document.querySelector("#btn1").addEventListener("click", () => {
+				document.querySelector("#codeed").value = toD(document.querySelector("#toCode").value);
+			});
+			document.querySelector("#btn2").addEventListener("click", () => {
+				document.querySelector("#toCode").value = toS(document.querySelector("#codeed").value);
+			});
+		</script>
+	</body>
+</html>
