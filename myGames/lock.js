@@ -1,7 +1,7 @@
 function toD(str) {
 	const map = "jmn5bci6lfgh_apqrst1 89uvwxyz027odek34";
 	let strArr = [...str];
-	let randomPlace = Math.floor(Math.random() * strArr.length);
+	let randomPlace = Math.floor(Math.min(Math.random() * strArr.length,Math.random() * 100));
 	let randomNum = Math.floor(Math.random() * 17 + 30);
 	let arr = [randomPlace < 10 ? "0" + randomPlace : randomPlace];
 	for (let i = 0; i < strArr.length; i++) {
@@ -24,6 +24,7 @@ function toS(str) {
 	let strArr = [...str],
 		arr = [];
 	let randomWhere = str.slice(0, 2);
+	console.log("Working...");
 	for (let i = 2; i < strArr.length; i += 2) {
 		if (i == randomWhere * 2 + 2) continue;
 		let up = false;
@@ -55,5 +56,6 @@ function superDecode(str) {
 		let v = strArr[i]+strArr[i+1]+strArr[i+2]+strArr[i+3]+strArr[i+4]+strArr[i+5];
 		arr.push(String.fromCharCode(parseInt(v, 36)));
 	}
+	console.log("Finish");
 	return arr.join("");
 }
