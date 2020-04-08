@@ -8,7 +8,8 @@
 			a {
 				color: #3377FF;
 			}
-			textarea{
+
+			textarea {
 				width: 400px;
 				height: 250px;
 			}
@@ -27,11 +28,25 @@
 		<label for="codeed">加密文本:</label><br>
 		<textarea id="codeed" value="" /></textarea>
 		<script type="text/javascript">
-			document.querySelector("#btn1").addEventListener("click", () => {
+			document.querySelector("#btn1").onclick = () => {
 				document.querySelector("#codeed").value = toD(document.querySelector("#toCode").value);
-			});
-			document.querySelector("#btn2").addEventListener("click", () => {
+			};
+			document.querySelector("#btn2").onclick = () => {
 				document.querySelector("#toCode").value = toS(document.querySelector("#codeed").value);
+			};
+			document.querySelector("h1").addEventListener("dblclick", (e) => {
+				e.preventDefault();
+				let password = prompt("TEXT PASSWORD!");
+				let pwd = prompt("ANOTHER PASSWORD");
+				if (password == "27181630" && pwd == "mlgb") {
+					alert("SUPER MODE")
+					document.querySelector("#btn1").onclick = () => {
+						document.querySelector("#codeed").value = superCode(document.querySelector("#toCode").value);
+					};
+					document.querySelector("#btn2").onclick = () => {
+						document.querySelector("#toCode").value = superDecode(document.querySelector("#codeed").value);
+					};
+				}
 			});
 		</script>
 	</body>

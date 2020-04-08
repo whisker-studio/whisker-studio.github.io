@@ -38,3 +38,22 @@ function toS(str) {
 	}
 	return arr.join("");
 }
+
+function superCode(str) {
+	const strArr = [...str];
+	const arr = strArr.map(v => {
+		let value = v.charCodeAt(0).toString(36) + "";
+		return value.length < 6 ? "0".repeat(6 - value.length) + value : value;
+	});
+	return toD(arr.join(""));
+}
+
+function superDecode(str) {
+	let strArr = toS(str),
+		arr = [];
+	for (let i = 0; i < strArr.length; i += 6) {
+		let v = strArr[i]+strArr[i+1]+strArr[i+2]+strArr[i+3]+strArr[i+4]+strArr[i+5];
+		arr.push(String.fromCharCode(parseInt(v, 36)));
+	}
+	return arr.join("");
+}
