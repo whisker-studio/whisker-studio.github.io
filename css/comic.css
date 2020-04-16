@@ -7,10 +7,9 @@ main {
 	width: 60%;
 	margin: 0 auto;
 	padding: 0.625em 1.875em;
-	/* background-color: indianred; */
 }
 
-main>div {
+main > div {
 	border: 2px solid #000;
 	margin-bottom: 1.25em;
 	border-radius: 1.25em;
@@ -19,18 +18,18 @@ main>div {
 .infoField {
 	display: flex;
 	height: 15.625em;
-	/* background-color: #BBCCAA; */
 	border-radius: inherit;
 }
 
 .infoField img {
 	height: 100%;
+	vertical-align: top;
 	border-radius: inherit;
 }
-.infoField h2{
+.infoField h2 {
 	margin: 0.625em 0;
 }
-.infoField p{
+.infoField p {
 	margin: 0.5em 0;
 }
 
@@ -59,16 +58,16 @@ main>div {
 .linkField a {
 	color: #000;
 	text-decoration: none;
-	transition: font-size .1s;
+	transition: font-size 0.1s;
 }
-.linkField a:hover{
+.linkField a:hover {
 	font-size: 1.3em;
 }
-@media all and (max-width:800px) {
-	body{
-		font-size:10px;
+@media all and (max-width: 800px) {
+	body {
+		font-size: 10px;
 	}
-	main{
-		width:80%;
+	main {
+		width: 80%;
 	}
 }

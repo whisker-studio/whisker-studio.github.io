@@ -9,7 +9,7 @@ main {
 	align-items: center;
 }
 
-body>div {
+body > div {
 	position: fixed;
 	top: 50%;
 	width: 6.25em;
@@ -42,10 +42,10 @@ body>div {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 2.8em;
-	background-color: rgba(255, 255, 255, .6);
+	background-color: rgba(255, 255, 255, 0.6);
 }
 
-@media all and (max-width:800px) {
+@media all and (max-width: 800px) {
 	body {
 		font-size: 10px;
 	}
@@ -53,7 +53,7 @@ body>div {
 	.img-container {
 		background-color: transparent;
 		width: 3.125rem;
-		transform:translate(0.8em)
+		transform: translate(0.8em);
 	}
 
 	.setting-content {
@@ -62,7 +62,7 @@ body>div {
 	}
 
 	.img-container:hover .setting {
-		transform: rotate(1.5turn)
+		transform: rotate(1.5turn);
 	}
 
 	.img-container:hover .setting-content {
