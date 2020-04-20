@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
+		<meta charset="utf-8" />
 		<title>Whisker Music</title>
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		<link rel="shortcut icon" type="image/png" href="./images/logo.png" />
 		<link rel="stylesheet" type="text/css" href="./css/nav.css" />
 		<link rel="stylesheet" type="text/css" href="./css/music.css" />
+		<link rel="stylesheet" type="text/css" href="./css/theme_b.css" id="themeStyleSheet" />
 		<script src="./js/nav.js"></script>
 		<script src="./js/motto.js"></script>
+		<script src="./js/musicThemeControl.js"></script>
 	</head>
 	<body>
 		<nav>
 			<div class="center">
 				<div id="logo">
 					<a href="./">
-						<img src="./images/logo.png" width="50">
+						<img src="./images/logo.png" width="50" />
 					</a>
 					<a href="./">
 						<span>Whisker Studio</span>
@@ -43,15 +45,24 @@
 					<div id="next" class="mainControl"></div>
 					<div id="volume">
 						<!-- <div id=""> -->
-							<input type="range" name="" id="volumn-control-bar" value="75">
+						<input type="range" name="" id="volumn-control-bar" value="75" />
 						<!-- </div> -->
 					</div>
 				</div>
 			</div>
 		</main>
-		<audio>
-			当前浏览器不支持audio
-		</audio>
-		<script src="./js/music_control.js"></script>
+		<div id="left">
+			<div id="cover-list"></div>
+			<div id="current-songs"></div>
+		</div>
+		<div id="right">
+			<div id="player-theme">
+				<div id="pre-theme"></div>
+				<div id="show-theme-field">GREEN</div>
+				<div id="next-theme"></div>
+			</div>
+		</div>
+		<audio></audio>
+		<script src="./js/musicControl.js"></script>
 	</body>
 </html>

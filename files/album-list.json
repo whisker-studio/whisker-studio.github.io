@@ -1,0 +1,35 @@
+[
+	{
+		"src": "rescue_koala.jpg",
+		"songs": [
+			{
+				"name": "Koala",
+				"singner": "Whisker",
+				"cover": "rescue_koala.jpg",
+				"src": "koala.mp3"
+			}
+		]
+	},
+	{
+		"src": "push_away.jpg",
+		"songs": [
+			{
+				"name": "Push Away",
+				"singner": "Whisker",
+				"cover": "push_away.jpg",
+				"src": "push_away.mp3"
+			}
+		]
+	},
+	{
+		"src": "trampoline.png",
+		"songs": [
+			{
+				"name": "Trampoline",
+				"singner": "ZAYN",
+				"cover": "trampoline.png",
+				"src": "trampoline.flac"
+			}
+		]
+	}
+]

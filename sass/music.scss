@@ -1,0 +1,247 @@
+@mixin track {
+	width: 100%;
+	height: 4px;
+	background-color: #fff;
+	border-radius: 2px;
+}
+@mixin thumb($mt) {
+	-webkit-appearance: none;
+	height: 15px;
+	width: 15px;
+	margin-top: $mt;
+	border-radius: 50%;
+	border: none;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+main {
+	display: flex;
+	width: calc(100vh - 3.125rem);
+	height: calc(100vh - 3.125rem);
+	margin: 0 auto;
+	flex-direction: column;
+	align-items: center;
+	box-sizing: border-box;
+	justify-content: space-between;
+	div {
+		box-sizing: border-box;
+	}
+	#cover {
+		width: 55%;
+		height: 55%;
+		background-color: #fff;
+		margin-top: 2.2rem;
+		border-radius: 50%;
+	}
+
+	#info {
+		width: 50%;
+		height: 2.75rem;
+		padding: 0.5rem 1.5rem;
+		font-size: 1.3rem;
+		line-height: 1.75rem;
+		border-radius: 2.75rem;
+		background-color: #fff;
+		text-align: center;
+		margin-bottom: 5rem;
+	}
+	#control {
+		width: 100%;
+	}
+}
+#progress-bar {
+	position: relative;
+	box-sizing: content-box;
+	width: 100%;
+	height: 4px;
+	border-width: 10px 0;
+	border-style: solid;
+	background-origin: content-box;
+	background-color: #fff;
+	cursor: pointer;
+	#passed-bar {
+		height: 100%;
+		width: 0;
+	}
+
+	#current-point {
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background-color: #fff;
+		top: -3px;
+		transform: translate(-50%, 0);
+		&:hover {
+			box-shadow: rgba(255, 255, 255, 0.3) 0 0 0 5px;
+		}
+	}
+}
+#control-bar {
+	display: flex;
+	width: 100%;
+	height: 106px;
+	padding: 6px;
+	justify-content: space-around;
+	align-items: flex-end;
+	div {
+		border-radius: 50%;
+		background-repeat: no-repeat;
+		background-position: center;
+		cursor: pointer;
+		&#volume {
+			position: relative;
+			width: 50px;
+			height: 50px;
+			border-radius: 25px;
+			padding: 10px;
+			background-origin: content-box;
+			background-size: 30px;
+			background-position: center bottom;
+			background-image: url(../images/vol_3.svg);
+			overflow: hidden;
+			transition: height 0.3s;
+			&:hover {
+				height: 220px;
+			}
+			#volumn-control-bar {
+				-webkit-appearance: none;
+				display: block;
+				position: absolute;
+				bottom: 20px;
+				transform-origin: left top;
+				transform: rotate(-90deg);
+				width: 150px;
+				height: 30px;
+				background-color: transparent;
+				margin: 0;
+				outline: none;
+				&::-webkit-slider-runnable-track {
+					@include track();
+				}
+				&::-moz-range-track {
+					@include track();
+				}
+				&::-ms-track {
+					@include track();
+				}
+				&::-webkit-slider-thumb {
+					@include thumb(-5.5px);
+				}
+				&::-moz-range-thumb {
+					@include thumb(-5.5px);
+				}
+				&::-ms-thumb {
+					@include thumb(0px);
+				}
+			}
+		}
+	}
+	.mainControl {
+		width: 80px;
+		height: 80px;
+		border: 4px solid #fff;
+		background-size: 40px;
+	}
+	#loop {
+		width: 50px;
+		height: 50px;
+		background-size: 30px;
+		background-image: url(../images/retweet.svg);
+	}
+	#pause {
+		width: 90px;
+		height: 90px;
+		background-image: url(../images/play.svg);
+	}
+	#next {
+		background-image: url(../images/forward.svg);
+	}
+	#pre {
+		background-image: url(../images/backward.svg);
+	}
+	#pause:hover,
+	#next:hover,
+	#pre:hover {
+		box-shadow: #fff 0 0 10px 1px;
+	}
+}
+.active {
+	box-shadow: rgba(255, 255, 255, 0.3) 0 0 0 5px;
+}
+#left {
+	width: 321px; /* 300px + 17px(scrollbar) */
+	height: calc(100vh - 3.125rem);
+	position: absolute;
+	top: 3.125rem;
+	left: 0;
+	#cover-list {
+		width: 100%;
+		height: 70%;
+		display: flex;
+		flex-wrap: wrap;
+		align-content: flex-start;
+		overflow: hidden auto;
+		.cover-item {
+			width: 107px;
+			height: 107px;
+			transition: transform 0.3s;
+			&:hover {
+				transform: scale(1.2);
+			}
+			img {
+				width: 100%;
+			}
+		}
+	}
+	#current-songs {
+		height: 30%;
+		overflow-y: auto;
+		.song-item {
+			height: 32px;
+			line-height: 32px;
+			&::before {
+				content: '◉';
+				font-size: 14px;
+				margin: 0 5px;
+			}
+		}
+	}
+}
+#right {
+	width: 300px;
+	height: calc(100vh - 3.125rem);
+	position: absolute;
+	top: 3.125rem;
+	right: 0;
+	#player-theme {
+		display: flex;
+		margin-top: 10px;
+		#pre-theme {
+			width: 25%;
+			background-size: cover;
+			background-image: url(../images/back.svg);
+			background-position: -8px 0;
+		}
+		#next-theme {
+			@extend #pre-theme;
+			transform: rotate(180deg);
+		}
+		#show-theme-field {
+			width: 50%;
+			height: 80px;
+			border: 3px solid #fff;
+			border-radius: 10px;
+			text-transform: uppercase;
+			line-height: 74px;
+			text-align: center;
+			font-weight: bold;
+			color: #fff;
+			font-size: 36px; // initial GREEN theme
+			text-shadow: 2px 2px darken($color: #fff, $amount: 30%);
+			box-sizing: border-box;
+		}
+	}
+}
