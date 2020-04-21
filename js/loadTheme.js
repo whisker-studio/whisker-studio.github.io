@@ -10,13 +10,12 @@ function setTheme() {
 }
 
 function setSize() {
-	window.imgWidth = localStorage.getItem('width') || '.5'
 	if (localStorage.getItem('sizeKey') === '') localStorage.setItem('sizekey', 1)
 	document.querySelector(`.size:nth-child(${+localStorage.getItem('sizeKey') + 1})`).style.border = '2px dashed #fbc531'
-	document.querySelector('main').innerHTML = ''
-	loadImg()
+	document.querySelector('main').classList = localStorage.getItem('width') || 'normal'
 }
 window.onload = () => {
 	setSize()
 	setTheme()
+	loadImg()
 }

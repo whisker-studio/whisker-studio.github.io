@@ -1,0 +1,42 @@
+// inital theme color : DARK
+$main-color: #222831;
+$pass-color: #393e46;
+$list-color: #252a34;
+body {
+	background-color: rgb(40, 44, 52);
+}
+main,
+#show-theme-field {
+	background-color: $main-color;
+}
+#progress-bar {
+	border-color: $main-color;
+}
+#passed-bar,
+div#volume {
+	background-color: $pass-color;
+}
+#volumn-control-bar::-webkit-slider-thumb {
+	background: darken($color: $pass-color, $amount: 10%);
+}
+#volumn-control-bar::-moz-range-thumb {
+	background: darken($color: $pass-color, $amount: 10%);
+}
+#volumn-control-bar::-ms-thumb {
+	background: darken($color: $pass-color, $amount: 10%);
+}
+#left,
+#right {
+	background-color: $list-color;
+}
+#current-songs {
+	box-sizing: border-box;
+	border-top: 3px double #fff;
+	color: #fff;
+}
+#theme-label{
+	color: #fff;
+}
+#cover-list {
+	background-color: $list-color;
+}

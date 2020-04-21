@@ -1,0 +1,36 @@
+main,
+#show-theme-field {
+  background-color: #39bae8;
+}
+
+#progress-bar {
+  border-color: #39bae8;
+}
+
+#passed-bar,
+div#volume {
+  background-color: #0086cf;
+}
+
+#volumn-control-bar::-webkit-slider-thumb {
+  background: #00659c;
+}
+
+#volumn-control-bar::-moz-range-thumb {
+  background: #00659c;
+}
+
+#volumn-control-bar::-ms-thumb {
+  background: #00659c;
+}
+
+#left,
+#right {
+  background-color: #a3daff;
+}
+
+#cover-list {
+  background-color: #1ec0ff;
+}
+
+/*# sourceMappingURL=theme_a.css.map */

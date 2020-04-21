@@ -11,27 +11,27 @@ main {
 	border-color: #000;
 	border-style: double;
 	padding: 0.625em 1.875em;
-}
-main .introduction {
-	width: 100%;
-	margin-top: 1em;
-	margin-bottom: 0.5em;
-}
-main .introduction #h1-logo {
-	width: 4rem;
-	height: 4rem;
-	background-image: url(../images/logo.png);
-	background-position: center;
-	background-size: 5rem;
-}
-main .introduction h1 {
-	margin: 0px;
-	line-height: 4rem;
-	font-size: 2.2em;
-	color: #e03;
-}
-main .introduction p::first-letter {
-	font-size: 1.3em;
+	.introduction {
+		width: 100%;
+		margin-top: 1em;
+		margin-bottom: 0.5em;
+		#h1-logo {
+			width: 4rem;
+			height: 4rem;
+			background-image: url(../images/logo.png);
+			background-position: center;
+			background-size: 5rem;
+		}
+		h1 {
+			margin: 0px;
+			line-height: 4rem;
+			font-size: 2.2em;
+			color: #e03;
+		}
+		p::first-letter {
+			font-size: 1.3em;
+		}
+	}
 }
 
 footer {
@@ -51,10 +51,12 @@ footer {
 	from {
 		bottom: -6em;
 	}
+
 	to {
 		bottom: 0;
 	}
 }
+
 @media all and (max-width: 800px) {
 	body {
 		font-size: 10px;
@@ -64,5 +66,3 @@ footer {
 		width: 80%;
 	}
 }
-
-/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,50 @@
+body {
+  background-color: #282c34;
+}
+
+main,
+#show-theme-field {
+  background-color: #222831;
+}
+
+#progress-bar {
+  border-color: #222831;
+}
+
+#passed-bar,
+div#volume {
+  background-color: #393e46;
+}
+
+#volumn-control-bar::-webkit-slider-thumb {
+  background: #22252a;
+}
+
+#volumn-control-bar::-moz-range-thumb {
+  background: #22252a;
+}
+
+#volumn-control-bar::-ms-thumb {
+  background: #22252a;
+}
+
+#left,
+#right {
+  background-color: #252a34;
+}
+
+#current-songs {
+  box-sizing: border-box;
+  border-top: 3px double #fff;
+  color: #fff;
+}
+
+#theme-label {
+  color: #fff;
+}
+
+#cover-list {
+  background-color: #252a34;
+}
+
+/*# sourceMappingURL=theme_d.css.map */

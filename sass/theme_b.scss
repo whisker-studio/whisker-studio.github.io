@@ -1,0 +1,32 @@
+// inital theme color : GREEN
+$main-color: #84cf96;
+$pass-color: #009a31;
+$side-color: #ceffce;
+$list-color: #c6e7ce;
+main,
+#show-theme-field {
+	background-color: $main-color;
+}
+#progress-bar {
+	border-color: $main-color;
+}
+#passed-bar,
+div#volume {
+	background-color: $pass-color;
+}
+#volumn-control-bar::-webkit-slider-thumb {
+	background: darken($color: $pass-color, $amount: 10%);
+}
+#volumn-control-bar::-moz-range-thumb {
+	background: darken($color: $pass-color, $amount: 10%);
+}
+#volumn-control-bar::-ms-thumb {
+	background: darken($color: $pass-color, $amount: 10%);
+}
+#left,
+#right {
+	background-color: $side-color;
+}
+#cover-list {
+	background-color: $list-color;
+}

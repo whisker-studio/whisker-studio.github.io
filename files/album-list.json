@@ -1,0 +1,63 @@
+[
+	{
+		"src": "rescue_koala.jpg",
+		"songs": [
+			{
+				"name": "Koala",
+				"singner": "Whisker",
+				"cover": "rescue_koala.jpg",
+				"src": "koala.mp3"
+			}
+		]
+	},
+	{
+		"src": "push_away.jpg",
+		"songs": [
+			{
+				"name": "Push Away",
+				"singner": "Whisker",
+				"cover": "push_away.jpg",
+				"src": "push_away.mp3"
+			}
+		]
+	},
+	{
+		"src": "trampoline.png",
+		"songs": [
+			{
+				"name": "Trampoline",
+				"singner": "ZAYN",
+				"cover": "trampoline.png",
+				"src": "trampoline.flac"
+			}
+		]
+	},
+	{
+		"src": "native.png",
+		"songs": [
+			{
+				"name": "Can't Stop",
+				"singner": "Onerepublic",
+				"cover": "native.png",
+				"src": "can't_stop.flac"
+			},
+			{
+				"name": "Light It Up",
+				"singner": "Onerepublic",
+				"cover": "native.png",
+				"src": "light_it_up.flac"
+			}
+		]
+	},
+	{
+		"src": "handwritten.png",
+		"songs": [
+			{
+				"name": "I Don't Even Know Your Name",
+				"singner": "Shawn Mendes",
+				"cover": "handwritten.png",
+				"src": "i_don't_even_know_your_name.flac"
+			}
+		]
+	}
+]
