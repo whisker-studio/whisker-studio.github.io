@@ -183,7 +183,9 @@ function controlList() {
 		// 渲染待播放歌曲的信息
 		loadMusic() {
 			rotateDeg = 0 // 专辑旋转度数调零
-			audio.src = `https://whisker_studio.gitee.io/music/songs/${songs[this.currentIndex].src}` // 更新音乐地址
+			audio.src = songs[this.currentIndex].abs
+				? songs[this.currentIndex].src
+				: `https://whisker_studio.gitee.io/music/songs/${songs[this.currentIndex].src}` // 更新音乐地址
 			document.querySelector('#cover').src = `https://whisker_studio.gitee.io/music/cover/${songs[this.currentIndex].cover}` // 加载专辑封面
 			document.querySelector('#info').textContent = `${songs[this.currentIndex].name} - ${
 				songs[this.currentIndex].singner
@@ -237,7 +239,7 @@ async function getAlbumInfo() {
 	// 渲染
 	for (let i = 0; i < albums.length; i++) {
 		document.querySelector('#cover-list').innerHTML += `
-		<div class="cover-item"><img src='./music/cover/${albums[i].src}'></div>
+		<div class="cover-item"><img src='https://whisker_studio.gitee.io/music/cover/${albums[i].src}'></div>
 		`
 	}
 	const imgs = Array.from(coverList.querySelectorAll('img'))

@@ -1,0 +1,14 @@
+[
+	{
+		"name": "Koala",
+		"singner": "Whisker",
+		"cover": "rescue_koala.jpg",
+		"src": "koala.mp3"
+	},
+	{
+		"name": "Push Away",
+		"singner": "Whisker",
+		"cover": "push_away.jpg",
+		"src": "push_away.mp3"
+	}
+]
