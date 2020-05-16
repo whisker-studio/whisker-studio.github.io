@@ -11,8 +11,8 @@ async function loadImg() {
 		num = i < 10 ? '0' + i : i
 		let img = document.createElement('img')
 		// img.width = screen.width * window.imgWidth
-		// img.src = `https://whisker_studio.gitee.io/comic/${s[0] + s[1] + num}.webp`
-		img.src = `http://127.0.0.1/whisker_studio/comic/${s[0] + s[1] + num}.webp`
+		img.src = `https://whisker_studio.gitee.io/comic/${s[0] + s[1] + num}.webp`
+		// img.src = `http://127.0.0.1/whisker_studio/comic/${s[0] + s[1] + num}.webp`
 		document.querySelector('main').appendChild(img)
 	}
 }
