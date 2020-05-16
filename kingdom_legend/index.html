@@ -11,14 +11,32 @@
 			<span>您的浏览器不支持Canvas</span>
 		</canvas>
 		<div class="right">
-            <h1>战国传奇</h1>
-            <h2>Kingdom Legend</h2>
-            <div id="replay">重新开始</div>
-        </div>
-        <div class="info">
-            <span id='showInfoField'></span>
-            <div class="confrim">确&nbsp;&nbsp;定</div>
-        </div>
+			<h1>战国传奇</h1>
+			<h2>Kingdom Legend</h2>
+			<div id="curinfo">当前玩家：<span id="showCurrentPlayer"></span></div>
+			<div id="replay">重新开始</div>
+		</div>
+		<div id="cover">
+			<h1>战国传奇</h1>
+			<div class="btn" id="startGame">开始游戏</div>
+			<div class="btn" id="setting">游戏设置</div>
+			<div class="btn">更多模式</div>
+			<div class="btn">关于游戏</div>
+		</div>
+		<div id="settingBox">
+			<div id="basicSetting">
+				<label for="theNumberOfPlayer">游戏人数：</label>
+				<input type="number" id="numberOfPlayers" max="7" min="3" value="3" />
+				<span id="setNumber">加载其余</span>
+			</div>
+			<div id="infoSetting"></div>
+			<span id="setAll">确定</span>
+		</div>
+		<div class="info">
+			<span id="showInfoField"></span>
+			<div class="confrim">确&nbsp;&nbsp;定</div>
+		</div>
 		<script src="./js/game.js"></script>
+		<script src="./js/gui.js"></script>
 	</body>
 </html>
