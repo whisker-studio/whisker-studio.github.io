@@ -1,10 +1,15 @@
 let hasSet = false,
 	numberOfPlayers = 3
 // 定义一个弹窗输出指定文字
-function alertInfo(info, duration = '.7s') {
-	document.querySelector('#showInfoField').innerHTML = info
-	document.querySelector('.info').style.animation = `show ${duration} forwards`
-	document.querySelector('.info').style.border = '2px dashed #fff'
+function alertInfo(info, duration = '.7s', style = {}) {
+	let span = document.querySelector('#showInfoField')
+	let alertBox = document.querySelector('.info')
+	span.innerHTML = info
+	for (attr in style) {
+		span.style[attr] = style[attr]
+	}
+	alertBox.style.animation = `show ${duration} forwards`
+	alertBox.style.border = '2px dashed #fff'
 }
 // 摁下确定后弹窗消失
 document.querySelector('.confrim').addEventListener('click', () => {
@@ -19,15 +24,13 @@ document.querySelector('#startGame').addEventListener('click', () => {
 	}
 	// 移除初始界面
 	document.querySelector('#cover').style.transform = 'translate(0,-100%)'
-	// let numberOfPlayers = prompt('输入游戏人数(不输或输入-1即可直接6人版预置)') || -1
-	// if (numberOfPlayers == -1) {
-	// 	player = presetPlayer
-	// }
 	init()
 })
-document.querySelector('#setting').addEventListener('click', () => {
+function showSetting() {
 	document.querySelector('#settingBox').style.display = 'flex'
-})
+}
+document.querySelector('#setting').addEventListener('click', showSetting)
+document.querySelector('#settingInside').addEventListener('click', showSetting)
 document.querySelector('#setNumber').addEventListener('click', () => {
 	let number = document.querySelector('#numberOfPlayers').value
 	if (number < 3 || number > 7) {
@@ -44,6 +47,7 @@ document.querySelector('#setNumber').addEventListener('click', () => {
 })
 document.querySelector('#setAll').addEventListener('click', () => {
 	hasSet = true
+	player = [] // 避免因重复设置导致人数异常
 	const names = Array.from(document.querySelector('#infoSetting').querySelectorAll('.name')).map(e => e.value)
 	const colors = Array.from(document.querySelector('#infoSetting').querySelectorAll('.color')).map(e => e.value)
 	for (let i = 0; i < numberOfPlayers; i++) {
@@ -54,4 +58,8 @@ document.querySelector('#setAll').addEventListener('click', () => {
 		})
 	}
 	document.querySelector('#settingBox').style.display = null
+	if (player[currentPlayer]) {
+		document.querySelector('#showCurrentPlayer').textContent = player[currentPlayer].name
+		document.querySelector('#showCurrentPlayer').style.color = player[currentPlayer].color
+	}
 })

@@ -8,6 +8,7 @@ const squareHeightNumber = 27
 let map,
 	gameOver,
 	currentPlayer,
+	repeat = 0,
 	eachRow = []
 for (let i = 0; i < squareWidthNumber; i++) {
 	eachRow.push(-1)
@@ -54,8 +55,6 @@ const presetPlayer = [
 ]
 let player = []
 
-
-
 function init() {
 	currentPlayer = 0
 	document.querySelector('#showCurrentPlayer').textContent = player[currentPlayer].name
@@ -66,8 +65,6 @@ function init() {
 	for (let i = 0; i < squareHeightNumber; i++) {
 		map.push(eachRow.slice()) // 深度克隆
 	}
-	// map[0]=eachRow.map(()=>-2)
-	// map[map.length-1]=eachRow.map(()=>-2)
 	// map[0][10] = -2
 	ctx.beginPath()
 	ctx.strokeStyle = '#000'
@@ -108,22 +105,26 @@ canvas.addEventListener('click', e => {
 			ctx.fillRect(w * squareLength, h * squareLength, squareLength, squareLength)
 			ctx.strokeRect(w * squareLength, h * squareLength, squareLength, squareLength)
 			map[h][w] = currentPlayer // 插入当前玩家的序号至map中
-			checkIfEat(w, h) // 检测是否可以吃棋
 			checkIfWin(w, h) // 检测是否获胜
-			currentPlayer = (currentPlayer + 1) % player.length // 更新当前玩家
-			document.querySelector('#showCurrentPlayer').textContent = player[currentPlayer].name
-			document.querySelector('#showCurrentPlayer').style.color = player[currentPlayer].color
+			if (!checkIfEat(w, h) /*检测是否可以吃棋*/ || repeat > 3 - 1) {
+				repeat = 0
+				currentPlayer = (currentPlayer + 1) % player.length // 更新当前玩家
+				document.querySelector('#showCurrentPlayer').textContent = player[currentPlayer].name
+				document.querySelector('#showCurrentPlayer').style.color = player[currentPlayer].color
+			} else repeat++
 		}
 	}
 })
 // 检测是否会被吃的函数
 function checkIfBeEaten(h, w) {
+	if (map[h][w] < -1 && map[h][w] > -14) return // 防止吃掉非空功能格
 	let up = map[h - 1] ? map[h - 1][w] : -2,
 		down = map[h + 1] ? map[h + 1][w] : -2
 	return [up, map[h][w + 1], down, map[h][w - 1]].every(v => v != -1)
 }
 // 检测是否可以吃棋的函数
 function checkIfEat(w, h) {
+	let flag = false
 	let arr = [
 		[h - 1, w],
 		[h, w + 1],
@@ -132,13 +133,20 @@ function checkIfEat(w, h) {
 	]
 	arr.forEach(v => {
 		if (map[v[0]] === undefined) return
-		if (checkIfBeEaten(...v) && map[h][w] !== map[v[0]][v[1]] && map[v[0]][v[1]] !== undefined) {
+		if (
+			map[v[0]][v[1]] !== -1 && // 确认不是空格(不在checkIfBeEaten中做检测是因为防止往围起来的中间放所导致的Bug)
+			map[v[0]][v[1]] !== undefined && // 确认不是边缘
+			map[h][w] !== map[v[0]][v[1]] && // 确认不是同色棋
+			checkIfBeEaten(...v)
+		) {
 			map[v[0]][v[1]] = -1
 			ctx.beginPath()
 			ctx.clearRect(v[1] * squareLength, v[0] * squareLength, squareLength, squareLength)
 			ctx.strokeRect(v[1] * squareLength, v[0] * squareLength, squareLength, squareLength)
+			flag = true
 		}
 	})
+	return flag
 }
 // 检测是否获胜的函数
 function checkIfWin(w, h) {
@@ -161,7 +169,8 @@ function checkIfWin(w, h) {
 		)
 	}
 	if (checkIfConnected(arr1) || checkIfConnected(arr2) || checkIfConnected(arr3) || checkIfConnected(arr4)) {
-		alertInfo(player[currentPlayer].name + '获胜！')
+		let congratulation = `恭喜${player[currentPlayer].name}获得胜利！`
+		alertInfo(congratulation, '.7s', { fontSize: 300 / Math.max(congratulation.length, 15) / 16 + 'vw' })
 		gameOver = true
 	}
 }

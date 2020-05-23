@@ -7,13 +7,15 @@
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
 	<body>
-		<canvas>
-			<span>您的浏览器不支持Canvas</span>
-		</canvas>
+		<main>
+			<canvas>
+				<span>您的浏览器不支持Canvas</span>
+			</canvas>
+		</main>
 		<div class="right">
 			<h1>战国传奇</h1>
-			<h2>Kingdom Legend</h2>
 			<div id="curinfo">当前玩家：<span id="showCurrentPlayer"></span></div>
+			<div class="btn" id="settingInside">游戏设置</div>
 			<div id="replay">重新开始</div>
 		</div>
 		<div id="cover">
@@ -21,13 +23,13 @@
 			<div class="btn" id="startGame">开始游戏</div>
 			<div class="btn" id="setting">游戏设置</div>
 			<div class="btn">更多模式</div>
-			<div class="btn">关于游戏</div>
+			<div class="btn"><a href="./README.html">关于游戏</a></div>
 		</div>
 		<div id="settingBox">
 			<div id="basicSetting">
 				<label for="theNumberOfPlayer">游戏人数：</label>
 				<input type="number" id="numberOfPlayers" max="7" min="3" value="3" />
-				<span id="setNumber">加载其余</span>
+				<span id="setNumber">保存人数</span>
 			</div>
 			<div id="infoSetting"></div>
 			<span id="setAll">确定</span>

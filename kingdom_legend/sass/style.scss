@@ -7,18 +7,30 @@ body {
 	overflow: hidden;
 	// background-image: url(../images/board.jpg);
 }
-canvas {
-	position: absolute;
-	top: 40 * $px;
-	left: 5%;
+main {
+	position: relative;
+	width: 80vw;
+	height: 100vh;
+	display: inline-block;
+	canvas {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
 }
 .right {
 	position: relative;
-	width: 50vh;
+	width: 20vw;
 	height: 100%;
 	text-align: center;
 	background-color: azure;
 	float: right;
+	h1 {
+		font-size: 30 * $px;
+	}
 	#curinfo {
 		padding: 5 * $px;
 		font-size: 20 * $px;
@@ -78,6 +90,7 @@ canvas {
 	height: 100%;
 	background-color: #eee;
 	background-image: url(../images/board.jpg);
+	background-position: center;
 	background-size: cover;
 	font-family: '宋体', serif;
 	// justify-content: center;
@@ -102,6 +115,10 @@ canvas {
 		text-align: center;
 		color: #000;
 		background-color: #eee;
+		a {
+			color: #000;
+			text-decoration: none;
+		}
 	}
 }
 #settingBox {
@@ -113,8 +130,8 @@ canvas {
 	width: 750 * $px;
 	height: 500 * $px;
 	font-size: 22px;
-	border-radius: 50*$px;
-	border: 8*$px #fff solid;
+	border-radius: 50 * $px;
+	border: 8 * $px #fff solid;
 	transform: translate(-50%, -50%);
 	color: #000;
 	background-color: #eee;
@@ -123,10 +140,11 @@ canvas {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	#setNumber,#setAll{
+	#setNumber,
+	#setAll {
 		cursor: pointer;
 	}
-	#setAll{
+	#setAll {
 		margin-bottom: 15px;
 	}
 }
